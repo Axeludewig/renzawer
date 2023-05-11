@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Nav2 from "./Nav2";
 import { Roboto } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const roboto = Roboto({
 	weight: "400",
@@ -25,39 +26,42 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html
-			lang="en"
-			className={roboto.className}
-		>
-			<Head>
-				<link
-					rel="preconnect"
-					href="https://fonts.googleapis.com"
-				/>
-				<link
-					rel="preconnect"
-					href="https://fonts.gstatic.com"
-					crossOrigin="anonymous"
-				/>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@1,300&display=swap"
-					rel="stylesheet"
-				/>
+		<ClerkProvider>
+			<html
+				lang="en"
+				className={roboto.className}
+			>
+				<Head>
+					<link
+						rel="preconnect"
+						href="https://fonts.googleapis.com"
+					/>
+					<link
+						rel="preconnect"
+						href="https://fonts.gstatic.com"
+						crossOrigin="anonymous"
+					/>
+					<link
+						href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@1,300&display=swap"
+						rel="stylesheet"
+					/>
 
-				<link
-					href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
-					rel="stylesheet"
-				/>
-				<script
-					src="https://kit.fontawesome.com/3826585c6c.js"
-					crossOrigin="anonymous"
-				></script>
-			</Head>
-			<body>
-				<Navbar />
-				{children}
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-			</body>
-		</html>
+					<link
+						href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
+						rel="stylesheet"
+					/>
+					<script
+						src="https://kit.fontawesome.com/3826585c6c.js"
+						crossOrigin="anonymous"
+					></script>
+				</Head>
+
+				<body>
+					<Navbar />
+					{children}
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }

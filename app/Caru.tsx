@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Caru() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,6 +12,14 @@ function Caru() {
 	const nextSlide = () => {
 		setCurrentSlide((currentSlide + 1) % 3);
 	};
+
+	useEffect(() => {
+		const slideInterval = setTimeout(() => {
+			nextSlide();
+		}, 2500); // Set the timeout to 5 seconds
+
+		return () => clearTimeout(slideInterval);
+	}, [currentSlide, nextSlide]);
 
 	return (
 		<div className="flex w-[310px] h-[200px] max-h-[200px] max-w-[400px] md:w-[800px] md:max-w-[800px] relative md:max-h-[400px] md:h-[400px] mt-20 md:mt-0 items-center justity-center">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Caru from "./Caru";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
 	return (
@@ -16,6 +17,12 @@ export default function Home() {
 			</div>
 			<div className="">
 				<div>
+					<UserButton />
+				</div>
+				<div>
+					<p className="text-center text-2xl text-slate-600 font-semibold mt-12">
+						Productos recientes
+					</p>
 					<Caru />
 				</div>
 			</div>
