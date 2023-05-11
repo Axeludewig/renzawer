@@ -16,7 +16,7 @@ function Caru() {
 	useEffect(() => {
 		const slideInterval = setTimeout(() => {
 			nextSlide();
-		}, 2500); // Set the timeout to 5 seconds
+		}, 1700); // Set the timeout to 5 seconds
 
 		return () => clearTimeout(slideInterval);
 	}, [currentSlide, nextSlide]);
@@ -25,21 +25,21 @@ function Caru() {
 		<div className="flex w-[310px] h-[200px] max-h-[200px] max-w-[400px] md:w-[800px] md:max-w-[800px] relative md:max-h-[400px] md:h-[400px] mt-20 md:mt-0 items-center justity-center">
 			<div className="carousel mx-auto relative flex items-center justify-center place-content-center">
 				<img
-					className={`slide shadow-2xl w-[300px] ${
+					className={`slide rounded-full shadow-2xl w-[300px] ${
 						currentSlide === 0 ? "visible" : "hidden"
 					} transition-opacity duration-500`}
 					src="/hongo000.png"
 					alt="Slide 1"
 				/>
 				<img
-					className={`slide shadow-2xl w-[300px] ${
+					className={`slide rounded-full shadow-2xl w-[300px] ${
 						currentSlide === 1 ? "visible" : "hidden"
 					} transition-opacity duration-500`}
 					src="ventana.png"
 					alt="Slide 2"
 				/>
 				<img
-					className={`slide shadow-2xl w-[300px] md:max-w-[500px] ${
+					className={`slide rounded-full shadow-2xl w-[300px] md:max-w-[500px] ${
 						currentSlide === 2 ? "visible" : "hidden"
 					} transition-opacity duration-500`}
 					src="./verde2.png"

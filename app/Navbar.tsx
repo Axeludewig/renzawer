@@ -1,9 +1,16 @@
 "use client";
 
+import { SignInButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import React from "react";
 
+import { useAuth } from "@clerk/nextjs";
+
 function Navbar() {
+	const { isLoaded, userId, sessionId, getToken } = useAuth();
+
+	// In case the user signs out while on the page.
+
 	return (
 		<div>
 			<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
@@ -91,6 +98,10 @@ function Navbar() {
 								>
 									Contacto
 								</a>
+							</li>
+							<li>
+								{!userId ? <SignInButton /> : ""}
+								{isLoaded ? <UserButton /> : <SignInButton />}
 							</li>
 						</ul>
 					</div>
