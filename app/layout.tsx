@@ -54,6 +54,7 @@ export default function RootLayout({
 						src="https://kit.fontawesome.com/3826585c6c.js"
 						crossOrigin="anonymous"
 					></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 				</Head>
 
 				<body>
