@@ -132,7 +132,7 @@ function Navbar() {
 								</a>
 							</li>
 							<li>
-								<div className="md:ml-0 ml-2">
+								<div className="md:ml-0 ml-2 dark:text-black">
 									{!userId ? <SignInButton /> : ""}
 									{isLoaded ? (
 										<UserButton />
