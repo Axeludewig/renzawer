@@ -31,7 +31,7 @@ function Navbar() {
 							Renzahuer Goth
 						</span>
 					</a>
-					<div className="w-10 h-10 p-2 ml-40  md:hidden">
+					<div className="w-10 h-10 p-2 ml-36 md:hidden">
 						<svg
 							fill="none"
 							stroke="currentColor"
@@ -132,8 +132,14 @@ function Navbar() {
 								</a>
 							</li>
 							<li>
-								{!userId ? <SignInButton /> : ""}
-								{isLoaded ? <UserButton /> : <SignInButton />}
+								<div className="block py-2 pl-3 pr-4 ml-8">
+									{!userId ? <SignInButton /> : ""}
+									{isLoaded ? (
+										<UserButton />
+									) : (
+										<SignInButton />
+									)}
+								</div>
 							</li>
 						</ul>
 					</div>
