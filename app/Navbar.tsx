@@ -31,7 +31,7 @@ function Navbar() {
 							Renzahuer Goth
 						</span>
 					</a>
-					<div className="w-10 h-10 p-2 ml-36 md:hidden">
+					<div className="w-10 h-10 p-2 ml-24 md:hidden">
 						<svg
 							fill="none"
 							stroke="currentColor"
