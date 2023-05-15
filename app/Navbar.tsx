@@ -15,7 +15,7 @@ function Navbar() {
 	return (
 		<div>
 			<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
-			<nav className="bg-white border-gray-200 dark:bg-gray-900">
+			<nav className="bg-white border-gray-200 ">
 				<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 					<a
 						href="/"
@@ -37,7 +37,7 @@ function Navbar() {
 							<a href="https://just-bluejay-60.accounts.dev/sign-in">
 								<svg
 									fill="none"
-									stroke="currentColor"
+									stroke="black"
 									stroke-width="1.5"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ function Navbar() {
 							<a href="/user">
 								<svg
 									fill="none"
-									stroke="currentColor"
+									stroke="black"
 									stroke-width="1.5"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
